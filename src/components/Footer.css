@@ -1,0 +1,13 @@
+footer{
+    display: flex;
+    justify-content: space-between;
+}
+.back-btn{
+    display: flex;
+    align-items: center;
+    color:var(--blue)
+}
+.btn-filled{
+    background-color: var(--blue);
+    text-transform: none;
+}
