@@ -6,7 +6,7 @@ import Step2 from "./components/Step2";
 import Step3 from "./components/Step3";
 import Footer from "./components/Footer";
 import SideBar from "./components/SideBar";
-
+import FormControl from '@material-ui/core/FormControl';
 
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 
@@ -24,12 +24,12 @@ function App() {
             <ArrowForwardIosIcon style={{ color: "#35A0EE" }} />
           </div>
         </div>
-        <div className="main-body">
+        <FormControl className="main-body" component="fieldset">
           {count === 1 && <Step1 setCount={setCount}/>}
           {count === 2 && <Step2 setCount={setCount}/>}
           {count === 3 && <Step3 setCount={setCount}/>}
+        </FormControl>
           <Footer count={count} setCount={setCount}/>
-        </div>
       </main>
     </div>
   );

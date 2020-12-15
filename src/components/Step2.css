@@ -1,0 +1,17 @@
+.radio_group{
+    display: flex;
+    gap: 1rem;
+}
+.radio_container{
+    padding: .5rem 2rem .5rem 1rem;
+    border: 1px solid var(--gray);
+    color: var(--blue);
+    border-radius: 4px;
+}
+.radioActive{
+    border: 1px solid var(--blue);
+    background: #F7FBFF;
+}
+.slider_component{
+    margin-top: 2rem;
+}

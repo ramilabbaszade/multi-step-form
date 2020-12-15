@@ -1,0 +1,21 @@
+.checkboxs_group {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  gap: 0.5rem;
+}
+.checkbox_container {
+  border: 1.5px solid var(--blue);
+  border-radius: 4px;
+  min-height: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 1400px) {
+  .checkbox_container {
+    height: 10rem;
+  }
+}

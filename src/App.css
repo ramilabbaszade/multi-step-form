@@ -65,7 +65,10 @@ aside{
 /*Main*/
 
 main{
-    padding: 3rem 5rem;
+    padding: 2rem 5rem 1rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .main-navigation{
     display: flex;
@@ -79,7 +82,5 @@ main{
 }
 .main-body{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
+
 }
