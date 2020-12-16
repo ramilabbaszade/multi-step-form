@@ -1,0 +1,72 @@
+
+aside{
+    background: var(--blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
+.side_container h3{
+    color: white;
+}
+.side_container h3 span{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.single-step{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+.step-seperator{
+    border: 1px dashed white;
+    width: 0;
+    height: 8px;
+    margin: .5rem 10px;
+}
+
+/*Quotes*/
+.quotes{
+    position: relative;
+    margin-bottom: 2rem;
+}
+.qutoes-icon{
+    background: white;
+    box-shadow: 16px 12px 56px rgba(11, 29, 46, 0.15);
+    border-radius: 3px;
+    color: var(--blue);
+    width: 2rem;
+    padding: 0.4rem;
+    text-align: center;
+    position: relative;
+    top: 15px;
+    left: -10px;
+}
+.quotes-body{
+    background: white;
+    padding: 2rem;
+    border-radius: 4px;
+}
+
+.quotes-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.quotes-footer__logo{
+    font-size: 26px;
+    font-weight: 800;
+}
+.quotes-footer__logo::first-letter{
+    color: var(--blue);
+}
+
+.quotes-triangle{
+    position: absolute;
+    top: 2.6rem;
+    border-left: none;
+    border-bottom: 40px solid transparent;
+    border-left: 60px solid transparent;
+    border-left: 150px solid rgba(168, 168, 168, 0.171);
+}

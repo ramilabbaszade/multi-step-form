@@ -4,6 +4,8 @@ import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import CheckCircleIconOutlined from "@material-ui/icons/CheckCircleOutlined";
 import FormatQuoteIcon from "@material-ui/icons/FormatQuote";
 
+import './SideBar.css'
+
 const SideBar = ({ count }) => {
   const checkStep2 = count === 2 || count === 3;
   const checkStep3 = count === 3;
@@ -45,6 +47,7 @@ const SideBar = ({ count }) => {
         </div>
       </div>
       <div className="quotes">
+        <div className="quotes-triangle"></div>
         <div className="qutoes-icon">
           <FormatQuoteIcon />
         </div>
@@ -59,7 +62,7 @@ const SideBar = ({ count }) => {
           </p>
           <div className="quotes-footer">
             <div>
-              {" "}
+            <div>
               {count === 1
                 ? "William Mac"
                 : count === 2
@@ -72,6 +75,10 @@ const SideBar = ({ count }) => {
                 : count === 2
                 ? "UNITEDPROPERTIES’ AGENT"
                 : "MANAGING DIRECTOR"}
+            </div>
+            </div>
+            <div className="quotes-footer__logo">
+              UP
             </div>
           </div>
         </div>

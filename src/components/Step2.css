@@ -5,12 +5,13 @@
 .radio_container{
     padding: .5rem 2rem .5rem 1rem;
     border: 1px solid var(--gray);
-    color: var(--blue);
+    color: black;
     border-radius: 4px;
 }
 .radioActive{
     border: 1px solid var(--blue);
     background: #F7FBFF;
+    color: var(--blue);
 }
 .slider_component{
     margin-top: 2rem;

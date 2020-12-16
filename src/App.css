@@ -7,61 +7,10 @@ a{
 }
 .app{
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 35% 65%;
     height: 100vh;
     font-family: 'Montserrat','Montserrat Alternates', sans-serif;
 }
-aside{
-    background: var(--blue);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 1rem 3rem;
-}
-.side_container h3{
-    color: white;
-}
-.side_container h3 span{
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.single-step{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: white;
-}
-.step-seperator{
-    border: 1px dashed white;
-    width: 0;
-    height: 8px;
-    margin: .5rem 10px;
-}
-
-/*Quotes*/
-.quotes{
-    position: relative;
-    margin-bottom: 2rem;
-}
-.qutoes-icon{
-    background: white;
-    box-shadow: 16px 12px 56px rgba(11, 29, 46, 0.15);
-    border-radius: 3px;
-    color: var(--blue);
-    width: 2rem;
-    padding: 0.4rem;
-    text-align: center;
-    position: relative;
-    top: 15px;
-    left: -10px;
-}
-.quotes-body{
-    background: white;
-    padding: 1rem;
-    border-radius: 4px;
-}
-
-
 /*Main*/
 
 main{

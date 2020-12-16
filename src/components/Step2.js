@@ -189,7 +189,7 @@ const Step2 = () => {
             onChange={handleRadio}
             value="yes"
             checked={state.isInvestor === "yes"}
-            style={{ color: "#35A0EE" }}
+            style={{ color: `${state.isInvestor ==="yes" ? '#35A0EE':'#D5D9DC'}`}}
           />
           <span>Yes</span>
         </div>
@@ -198,7 +198,7 @@ const Step2 = () => {
             onChange={handleRadio}
             checked={state.isInvestor === "no"}
             value="no"
-            style={{ color: "#35A0EE" }}
+            style={{ color: `${state.isInvestor ==="no" ? '#35A0EE':'#D5D9DC'}`}}
           />
           <span>No</span>
         </div>

@@ -18,14 +18,16 @@ const checkboxs = [
 const Step3 = () => {
   const [name, setName] = useState([])
 
-  const handleChange = (e, value) => {
+  const handleChange = (e) => {
     let data = name;
     data.push(e.target.value);
     setName(data)
     
-    console.log(name, value)
+    console.log(name)
 
   };
+  console.log(name)
+
 
   return (
     <div>
@@ -42,7 +44,7 @@ const Step3 = () => {
               <Checkbox
                 key={index}
                 value={option.value}
-                onChange={(e)=> handleChange(e, option.value)}
+                onChange={(e)=> handleChange(e)}
                 style={{ color: "#35A0EE" }}
               />
               <label htmlFor="check"> {option.value} </label>

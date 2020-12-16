@@ -72,7 +72,6 @@ const Footer = ({ setCount, count }) => {
         <PrimaryButton
           variant="contained"
           endIcon={<ArrowForwardIosIcon />}
-          href="/"
         >
           {count === 3 ? "Finish" : "Next step"}
         </PrimaryButton>
