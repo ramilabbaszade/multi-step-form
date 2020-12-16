@@ -45,14 +45,14 @@ const Step1 = () => {
           required
           id="standard-required"
           label="Full name"
-          value={state.fullName || "John Doe"}
+          value={state.fullName || ""}
           onChange={(e) => setState({ ...state, fullName: e.target.value })}
           style={{ marginRight: "1rem" }}
         />
         <ReactPhoneInput
           value={state.phone}
           defaultCountry={"us"}
-          onChange={(number) => setState({ ...state, phone:number })}
+          onChange={(number) => setState({ ...state, phone: number })}
           inputClass="input-phone"
           buttonClass="button-phone"
           component={TextField}
@@ -66,7 +66,7 @@ const Step1 = () => {
       <TextField
         id="standard-full-width"
         label="E-mail address"
-        value={state.email || "john.doe@unitedproperties.com"}
+        value={state.email || ""}
         onChange={(e) => setState({ ...state, email: e.target.value })}
         style={{ margin: "2rem 0" }}
         fullWidth
@@ -80,7 +80,7 @@ const Step1 = () => {
         select
         label="Country"
         fullWidth
-        value={state.country || "UKR"}
+        value={state.country || ""}
         onChange={(e) => setState({ ...state, country: e.target.value })}
       >
         {countries.map((option) => (

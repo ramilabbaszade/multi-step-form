@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import "./App.css";
 
 import Step1 from "./components/Step1";
@@ -7,11 +7,13 @@ import Step3 from "./components/Step3";
 import Footer from "./components/Footer";
 import SideBar from "./components/SideBar";
 import FormControl from '@material-ui/core/FormControl';
+import {FormContext} from './components/context/FormContext'
 
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 
 function App() {
-  const [count, setCount] = useState(1);
+  const { count } = useContext(FormContext);
+
   return (
     <div className="app">
       <SideBar count={count}/>
@@ -25,11 +27,11 @@ function App() {
           </div>
         </div>
         <FormControl className="main-body" component="fieldset">
-          {count === 1 && <Step1 setCount={setCount}/>}
-          {count === 2 && <Step2 setCount={setCount}/>}
-          {count === 3 && <Step3 setCount={setCount}/>}
+          {count === 1 && <Step1/>}
+          {count === 2 && <Step2/>}
+          {count === 3 && <Step3/>}
         </FormControl>
-          <Footer count={count} setCount={setCount}/>
+          <Footer />
       </main>
     </div>
   );

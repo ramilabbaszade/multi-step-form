@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import { withStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
+import { FormContext } from "./context/FormContext";
 
 import "./Footer.css";
 
@@ -43,7 +44,9 @@ const SecondaryButton = withStyles({
   },
 })(Button);
 
-const Footer = ({ setCount, count }) => {
+const Footer = () => {
+  const { submitData, count, setCount, submitSkip } = useContext(FormContext);
+
   return (
     <footer>
       <div
@@ -55,23 +58,23 @@ const Footer = ({ setCount, count }) => {
         className="back-btn"
       >
         <ArrowBackIosIcon />
-        <a href="#home">Back to the {count === 1 ? "homepage" : "previous page"}</a>
+        <a href="#home">
+          Back to the {count === 1 ? "homepage" : "previous page"}
+        </a>
       </div>
       <div>
-        <SecondaryButton
-          onClick={() => {
-            if (count === 3) {
-              setCount(1);
-            } else {
-              setCount(count + 1);
-            }
-          }}
-        >
-          Skip for now
-        </SecondaryButton>
+        {count !== 3 && (
+          <SecondaryButton
+            onClick={submitSkip}
+          >
+            Skip for now
+          </SecondaryButton>
+        )}
+
         <PrimaryButton
           variant="contained"
           endIcon={<ArrowForwardIosIcon />}
+          onClick={submitData}
         >
           {count === 3 ? "Finish" : "Next step"}
         </PrimaryButton>

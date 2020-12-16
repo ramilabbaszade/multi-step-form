@@ -1,15 +1,33 @@
-import React, {createContext, useState} from 'react'
-import App from '../../App'
+import React, { createContext, useState } from "react";
+import App from "../../App";
 
-export const FormContext = createContext()
+export const FormContext = createContext();
 
-const FormContextProvider = (props) => {
-    const [state,setState] = useState([])
-    return (
-        <FormContext.Provider value={{state,setState}}>
-            <App/>
-        </FormContext.Provider>
-    )
-}
+const FormContextProvider = () => {
+  const [count, setCount] = useState(1);
+  const [state, setState] = useState([]);
+  const [finalState, setFinalState] = useState([]);
 
-export default FormContextProvider
+  const submitData = () => {
+    setFinalState((finalState) => [...finalState, state]);
+    if (count !== 3) {
+      setCount(count + 1);
+    } else {
+      setState("");
+      setCount(1);
+    }
+  };
+  const submitSkip = () => {
+    setCount(count + 1);
+    setFinalState((finalState) => [...finalState, state]);
+  };
+  return (
+    <FormContext.Provider
+      value={{ state, setState, submitData, count, setCount, submitSkip }}
+    >
+      <App />
+    </FormContext.Provider>
+  );
+};
+
+export default FormContextProvider;

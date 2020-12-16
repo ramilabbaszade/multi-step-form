@@ -1,12 +1,16 @@
-import React from "react";
+import React, {useContext} from "react";
 
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import CheckCircleIconOutlined from "@material-ui/icons/CheckCircleOutlined";
 import FormatQuoteIcon from "@material-ui/icons/FormatQuote";
+import { FormContext } from "./context/FormContext";
+
 
 import './SideBar.css'
 
-const SideBar = ({ count }) => {
+const SideBar = () => {
+  const { count } = useContext(FormContext);
+
   const checkStep2 = count === 2 || count === 3;
   const checkStep3 = count === 3;
   return (
