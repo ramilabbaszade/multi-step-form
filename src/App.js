@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import "./App.css";
 
 import Step1 from "./components/Step1";
 import Step2 from "./components/Step2";
@@ -7,9 +6,11 @@ import Step3 from "./components/Step3";
 import Footer from "./components/Footer";
 import SideBar from "./components/SideBar";
 import FormControl from '@material-ui/core/FormControl';
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import {FormContext} from './components/context/FormContext'
 
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import "./App.css";
+
 
 function App() {
   const { count } = useContext(FormContext);

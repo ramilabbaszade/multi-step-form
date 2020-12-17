@@ -21,7 +21,7 @@ const SideBar = () => {
       <div className="steps-map">
         <div className="single-step">
           <CheckCircleIcon />
-          <div>Contact Details</div>
+          <div>Contact details</div>
         </div>
         <hr className="step-seperator" />
         <div className="single-step">
@@ -33,7 +33,7 @@ const SideBar = () => {
             />
           )}
           <div className={`${checkStep2 ? "" : "low-color"}`}>
-            Investment Plans
+            Investment plans
           </div>
         </div>
         <hr className="step-seperator" />
@@ -46,7 +46,7 @@ const SideBar = () => {
             />
           )}
           <div className={`${checkStep3 ? "" : "low-color"}`}>
-            Investmen preferences
+            Investment preferences
           </div>
         </div>
       </div>

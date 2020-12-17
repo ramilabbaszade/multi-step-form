@@ -9,17 +9,19 @@ const FormContextProvider = () => {
   const [finalState, setFinalState] = useState([]);
 
   const submitData = () => {
-    setFinalState((finalState) => [...finalState, state]);
     if (count !== 3) {
+      setFinalState((finalState) => [...finalState, state]);
       setCount(count + 1);
-    } else {
-      setState("");
+    } else if(count === 3) {
+      setFinalState((finalState) => [...finalState, state]);
+      console.log(finalState)
       setCount(1);
+      alert(JSON.stringify(finalState))
     }
   };
   const submitSkip = () => {
-    setCount(count + 1);
     setFinalState((finalState) => [...finalState, state]);
+    setCount(count + 1);
   };
   return (
     <FormContext.Provider

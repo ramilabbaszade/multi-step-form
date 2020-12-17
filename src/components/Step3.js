@@ -1,34 +1,50 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Checkbox from "@material-ui/core/Checkbox";
+import { FormContext } from "./context/FormContext";
 
 import "./Step3.css";
 
-
-const checkboxs = [
-  { id: 1, name: "checkedA", value: "Single family" },
-  { id: 2, name: "checkedB", value: "Residential multifamily" },
-  { id: 3, name: "checkedC", value: "Commercial retail" },
-  { id: 4, name: "checkedD", value: "Commercial industrial" },
-  { id: 5, name: "checkedE", value: "Commercial hospitality" },
-  { id: 6, name: "checkedF", value: "Commercial warehousing" },
-  { id: 7, name: "checkedG", value: "Commercial office" },
-  { id: 8, name: "checkedK", value: "Other" },
-];
-
 const Step3 = () => {
+  const { state, setState } = useContext(FormContext);
+
+  const checkboxs = [
+    { id: 1, isChecked: false, name: "checkedA", value: "Single family" },
+    {
+      id: 2,
+      isChecked: false,
+      name: "checkedB",
+      value: "Residential multifamily",
+    },
+    { id: 3, isChecked: true, name: "checkedC", value: "Commercial retail" },
+    {
+      id: 4,
+      isChecked: false,
+      name: "checkedD",
+      value: "Commercial industrial",
+    },
+    {
+      id: 5,
+      isChecked: false,
+      name: "checkedE",
+      value: "Commercial hospitality",
+    },
+    {
+      id: 6,
+      isChecked: true,
+      name: "checkedF",
+      value: "Commercial warehousing",
+    },
+    { id: 7, isChecked: false, name: "checkedG", value: "Commercial office" },
+    { id: 8, isChecked: false, name: "checkedK", value: "Other" },
+  ];
   const [name, setName] = useState([])
 
-  const handleChange = (e) => {
-    let data = name;
-    data.push(e.target.value);
-    setName(data)
-    
-    console.log(name)
-
+  const handleChange = (event) => {
+      let data = name;
+      data.push(event.target.value);
+      setName(data)
+      setState({...state, checkboxes:name})
   };
-  console.log(name)
-
-
   return (
     <div>
       <h2>Investment preferences</h2>
@@ -42,7 +58,8 @@ const Step3 = () => {
           return (
             <div key={option.id} className="checkbox_container">
               <Checkbox
-                key={index}
+                key={option.name}
+                name={option.value}
                 value={option.value}
                 onChange={(e)=> handleChange(e)}
                 style={{ color: "#35A0EE" }}
