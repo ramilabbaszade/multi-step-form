@@ -14,7 +14,6 @@ const FormContextProvider = () => {
       setCount(count + 1);
     } else if(count === 3) {
       setFinalState((finalState) => [...finalState, state]);
-      console.log(finalState)
       setCount(1);
       alert(JSON.stringify(finalState))
     }
